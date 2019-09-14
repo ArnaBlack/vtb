@@ -1,0 +1,25 @@
+/**
+ * Remove list styles on <ul> tag
+ */
+
+._not-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/**
+ * Text color helpers
+ */
+
+._t-black {
+    color: $c-black;
+}
+
+._t-gold {
+    color: $c-gold;
+}
+
+._t-white {
+    color: white;
+}

@@ -1,0 +1,63 @@
+.link {
+    color: $c-black;
+    cursor: pointer;
+    transition: all .4s $easing;
+
+    &:hover,
+    &._active,
+    &._active-exact {
+        color: white;
+    }
+
+    &._white {
+        color: white;
+
+        &:hover,
+        &._active,
+        &._active-exact {
+            color: $c-gold;
+        }
+    }
+
+    &._black {
+        color: $c-black;
+
+        &:hover,
+        &._active,
+        &._active-exact {
+            color: $c-gold;
+        }
+    }
+
+    &._gold {
+        color: $c-gold;
+
+        &:hover,
+        &._active,
+        &._active-exact {
+            color: white;
+        }
+    }
+
+    &._white-gold {
+        color: white;
+        opacity: .6;
+
+        &:hover,
+        &._active,
+        &._active-exact {
+            color: $c-gold;
+        }
+    }
+
+    &._transparent {
+        color: white;
+        opacity: .6;
+
+        &:hover,
+        &._active,
+        &._active-exact {
+            opacity: 1;
+        }
+    }
+}

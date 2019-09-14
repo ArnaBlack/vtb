@@ -1,0 +1,14 @@
+.swiper-container {
+    overflow: hidden;
+}
+
+.swiper-wrapper {
+    position: relative;
+    display: flex;
+    height: 100%;
+    transition-timing-function: $easing;
+}
+
+.swiper-slide {
+    flex-shrink: 0;
+}

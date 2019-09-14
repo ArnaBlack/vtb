@@ -1,0 +1,53 @@
+.range-filter {
+
+    .vue-slider-rail {
+        background-color: rgba(white, .6);
+    }
+
+    .vue-slider-process {
+        background-color: white;
+    }
+
+    .vue-slider-dot {
+        cursor: pointer;
+
+        &:hover {
+
+            &:after {
+                transform: translate3d(-50%, -50%, 0) scale(1.2);
+            }
+        }
+
+        &:active {
+
+            &:after {
+                transform: translate3d(-50%, -50%, 0) scale(.9);
+            }
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: white;
+            transform: translate3d(-50%, -50%, 0);
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 12px;
+            min-height: 12px;
+            border-radius: 50%;
+            border: 2px solid white;
+            transform: translate3d(-50%, -50%, 0) scale(1);
+            transition: all .1s $easing;
+        }
+    }
+}
