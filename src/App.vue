@@ -1,6 +1,6 @@
 <template>
   <div :class="$style.container">
-  <form class="pt-3">
+  <form class="pt-3" @submit.prevent="onSubmit">
         <div class="form-group">
             <label for="email">Email</label>
             <input
@@ -46,6 +46,12 @@
             </div>
           </div>
         </div>
+        <button
+          class="btn btn-success"
+          type="submit"
+          :disabled="$v.$invalid">
+            Submit
+        </button>
     </form>
   </div>
 </template>
@@ -61,6 +67,12 @@ export default {
       confirmPass: ''
     }
   },
+  methods: {
+    onSubmit() {
+      console.log(this.email, this.password);
+    }
+  },
+
   validations: {
     email: {
       required,
@@ -72,7 +84,7 @@ export default {
            setTimeout(() => {
              const value = newEmail !== 'test@mail.ru'
               resolve(value)
-           }, 3000)
+           }, 1000)
         })
       }
     },
