@@ -1,6 +1,0 @@
-FROM node:10-alpine
-ARG SENTRY_FRONTEND_DSN
-ENV SENTRY_FRONTEND_DSN="${SENTRY_FRONTEND_DSN}"
-COPY ./ /app
-WORKDIR /app
-#RUN npm i && npm run build
