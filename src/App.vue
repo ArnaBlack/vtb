@@ -53,20 +53,40 @@
           <strong>{{ car.name }}</strong> - {{ car.year }}
         </li>
       </ul>
+
+      <hr>
+      <div class="container pt-5">
+        <!-- <app-counter :counter="counter"></app-counter> -->
+        <app-counter></app-counter>
+        <second-counter></second-counter>
+        <!-- <Actions @counterUpdated="counter += $event"></Actions> -->
+        <Actions></Actions>
+
+      </div>
   </div>
 </template>
 
 <script>
-
+import Counter from './pages/Counter'
+import SecondCounter from './pages/SecondCounter'
+import Actions from './pages/Actions'
 export default {
   data() {
     return {
       CarName: '',
       CarYear: 2018,
       cars: [],
-      resource: null
+      resource: null,
+      // counter: 0
     }
   },
+
+  components: {
+    appCounter: Counter,
+    Actions: Actions,
+    SecondCounter: SecondCounter
+  },
+
   methods: {
     createCar() {
       const car = {

@@ -4,6 +4,7 @@ import Vuelidate from 'vuelidate'
 import VueRouter from 'vue-router'
 import App from './App.vue'
 import router from './routes'
+import store from './store/index'
 
 Vue.use(Vuelidate)
 Vue.use(VueRouter)
@@ -19,6 +20,7 @@ Vue.http.interceptors.push(request => {
 
 new Vue({
   el: '#app',
+  store,
   render: h => h(App),
   router
 })
